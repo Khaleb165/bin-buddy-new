@@ -27,6 +27,7 @@ dependencies:
   flutter_polyline_points: ^1.0.0
   latlng: ^1.0.0
   http: ^0.13.6
+  flutter_dotenv: ^6.0.0
 
 dev_dependencies:
   flutter_test:
