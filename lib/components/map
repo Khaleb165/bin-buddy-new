@@ -1,0 +1,166 @@
+
+LatLng point = LatLng(6.30000, -2.40000);
+LatLng point1 = LatLng(7.373175, -2.365423);
+LatLng point2 = LatLng(6.073175, -0.595423);
+LatLng point3 = LatLng(8.073175, -1.765423);
+LatLng point4 = LatLng(8.973175, -1.665423);
+LatLng point5 = LatLng(5.573175, -2.065423);
+LatLng point6 = LatLng(6.673175, -1.565423);
+LatLng point7 = LatLng(7.9465, 0.0032);
+
+
+
+
+
+
+
+Scaffold(
+        floatingActionButtonLocation: FloatingActionButtonLocation.startDocked,
+        floatingActionButton: Wrap( //will break to another line on overflow
+          direction: Axis.vertical, //use vertical to show  on vertical axis
+          children: <Widget>[
+            Container(
+                margin:EdgeInsets.all(5),
+                child: FloatingActionButton(
+                  heroTag: 'button1',
+                  onPressed: (){
+                    //action code for button 1
+                  },
+                  backgroundColor: buttonColor,
+                  child: Image.asset('assets/list.png',color: Colors.white,scale: 2,)
+                )
+            ), //button first
+
+            Container(
+                margin:EdgeInsets.all(5),
+                child: FloatingActionButton(
+                  heroTag: 'button2',
+                  onPressed: (){
+                    // Navigator.push(context, MaterialPageRoute(builder: (context) => NavigationDrawerDemo()));
+                  },
+                  backgroundColor: buttonColor,
+                  child: Icon(Icons.add,color: Colors.white,size: 35,),
+                )
+            ), // button second
+
+            Container(
+                margin:EdgeInsets.only(left: 5,right: 5,top: 5,bottom: 20),
+                child: FloatingActionButton(
+                  heroTag: 'button3',
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => TrialMap()));
+                  },
+                  backgroundColor: buttonColor,
+                  child: Icon(Icons.remove,color: Colors.white,size: 35,),
+                )
+            ), // button third
+
+            // Add more buttons here
+          ],
+        ),
+        body: Stack(
+          children: [
+            FlutterMap(
+                options: MapOptions(
+                  onTap: (_,p){
+                    setState(() {
+                      point = p;
+                    });
+                  },
+                  center: LatLng(8.059261, -1.729550),
+                  zoom: 7.3,
+                ),
+              children: [
+                TileLayer(
+                  urlTemplate: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                  subdomains: ['a','b','c'],
+                ),
+                MarkerLayer(
+                  markers: [
+                    Marker(
+                        width: 100,
+                        height: 100,
+                        point: point,
+                        rotate: true,
+                        builder: (context) => Icon(
+                        Icons.near_me,
+                        color: buttonColor,
+                          size: 50,
+                        )),
+                    Marker(
+                        width: 100,
+                        height: 100,
+                        point: point1,
+                        rotate: true,
+                        builder: (context) => Icon(
+                          Icons.delete,
+                          color: Colors.yellow[800],
+                          size: 40,
+                        )),
+                    Marker(
+                        width: 100,
+                        height: 100,
+                        point: point2,
+                        rotate: true,
+                        builder: (context) => Icon(
+                          Icons.delete,
+                          color: Colors.yellow[800],
+                          size: 40,
+                        )),
+                    Marker(
+                        width: 100,
+                        height: 100,
+                        point: point3,
+                        rotate: true,
+                        builder: (context) => Icon(
+                          Icons.delete,
+                          color: Colors.yellow[800],
+                          size: 40,
+                        )),
+                    Marker(
+                        width: 100,
+                        height: 100,
+                        point: point4,
+                        rotate: true,
+                        builder: (context) => Icon(
+                          Icons.delete,
+                          color: Colors.yellow[800],
+                          size: 40,
+                        )),
+                    Marker(
+                        width: 100,
+                        height: 100,
+                        point: point5,
+                        rotate: true,
+                        builder: (context) => Icon(
+                          Icons.delete,
+                          color: Colors.yellow[800],
+                          size: 40,
+                        )),
+                    Marker(
+                        width: 100,
+                        height: 100,
+                        point: point6,
+                        rotate: true,
+                        builder: (context) => Icon(
+                          Icons.recycling_outlined,
+                          color: Colors.red[600],
+                          size: 40,
+                        )),
+                    Marker(
+                        width: 100,
+                        height: 100,
+                        point: point7,
+                        rotate: true,
+                        builder: (context) => Icon(
+                          Icons.delete,
+                          color: Colors.yellow[800],
+                          size: 40,
+                        )),
+                  ],
+                )
+              ],
+            )
+          ],
+        )
+    );

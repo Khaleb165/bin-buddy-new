@@ -1,0 +1,55 @@
+name: bin_buddy_new
+description: "A new Flutter project."
+publish_to: 'none' 
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  #flutter_map: ^5.0.0
+  #flutter_geocoder: ^0.2.2-nullsafety
+  tuple: ^2.0.1
+  latlong2: ^0.9.0
+  positioned_tap_detector_2: ^1.0.4
+  transparent_image: ^2.0.1
+  async: any
+  flutter_image: ^4.1.6
+  vector_math: ^2.1.4
+  proj4dart: ^2.1.0
+  meta: ^1.9.1
+  collection: ^1.17.1
+  google_maps_flutter: ^2.3.0
+  flutter_polyline_points: ^1.0.0
+  latlng: ^1.0.0
+  http: ^0.13.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_native_splash: ^2.3.1
+
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/splash2.png
+  web: false
+
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/logo.png"
+
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/
