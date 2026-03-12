@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../constants/colors.dart';
+import '../../core/constants/colors.dart';
 
 class PaymentHistoryPage extends StatelessWidget {
   const PaymentHistoryPage({super.key});

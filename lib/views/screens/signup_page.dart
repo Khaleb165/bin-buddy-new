@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../constants/colors.dart';
+import '../../core/constants/colors.dart';
 import '../widgets/custom_button.dart';
 import '../widgets/custom_textfield.dart';
 import 'home_screen.dart';
@@ -106,8 +106,9 @@ class _SignUpScreenState extends State<SignUpScreen>
                     hide = !hide;
                   });
                 },
-                icon:
-                    hide ? const Icon(Icons.visibility_off) : const Icon(Icons.visibility),
+                icon: hide
+                    ? const Icon(Icons.visibility_off)
+                    : const Icon(Icons.visibility),
                 color: Colors.black54,
               ),
             ),
@@ -122,8 +123,9 @@ class _SignUpScreenState extends State<SignUpScreen>
                     hide = !hide;
                   });
                 },
-                icon:
-                    hide ? const Icon(Icons.visibility_off) : const Icon(Icons.visibility),
+                icon: hide
+                    ? const Icon(Icons.visibility_off)
+                    : const Icon(Icons.visibility),
                 color: Colors.black54,
               ),
             ),
@@ -132,8 +134,10 @@ class _SignUpScreenState extends State<SignUpScreen>
               text: 'Join the community',
               onPressed: () {
                 Navigator.pop(context);
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const HomeScreen()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const HomeScreen()));
               },
             ),
             Padding(

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-import '../constants/colors.dart';
+import '../../core/constants/colors.dart';
 
 class BlogScreen extends StatefulWidget {
   const BlogScreen({Key? key}) : super(key: key);

@@ -1,9 +1,8 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
-
 import 'package:flutter/material.dart';
 
-import '../constants/colors.dart';
+import '../../core/constants/colors.dart';
 import '../screens/introduction_screen.dart';
 import 'payment_history.dart';
 import 'profile_screen.dart';

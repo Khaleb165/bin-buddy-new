@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../constants/colors.dart';
+import '../../core/constants/colors.dart';
 import '../widgets/custom_button.dart';
 import '../widgets/custom_textfield.dart';
 import 'home_screen.dart';
@@ -83,8 +83,9 @@ class _LoginPageState extends State<LoginPage>
                     hide = !hide;
                   });
                 },
-                icon:
-                    hide ? const Icon(Icons.visibility_off) : const Icon(Icons.visibility),
+                icon: hide
+                    ? const Icon(Icons.visibility_off)
+                    : const Icon(Icons.visibility),
                 color: Colors.black54,
               ),
             ),
@@ -108,14 +109,15 @@ class _LoginPageState extends State<LoginPage>
               text: 'Login',
               onPressed: () {
                 Navigator.pop(context);
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const HomeScreen()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const HomeScreen()));
               },
             ),
             const SizedBox(height: 20),
             const Padding(
-              padding:
-                  EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+              padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
               child: const Row(
                 children: [
                   Expanded(child: Divider(color: Colors.black)),

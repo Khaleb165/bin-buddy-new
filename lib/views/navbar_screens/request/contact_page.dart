@@ -4,8 +4,8 @@ import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 
+import '../../../core/constants/colors.dart';
 import '../../screens/home_screen.dart';
-import '../../constants/colors.dart';
 
 class ContactPage extends StatefulWidget {
   const ContactPage({super.key});

@@ -2,9 +2,9 @@
 
 import 'package:flutter/material.dart';
 
-import 'screens/introduction_screen.dart';
+import 'views/screens/introduction_screen.dart';
 
-void main() {
+void main() async {
   runApp(const MyApp());
 }
 

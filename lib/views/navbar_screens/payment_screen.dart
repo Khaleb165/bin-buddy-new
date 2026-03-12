@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../constants/colors.dart';
+import '../../core/constants/colors.dart';
 import '../payment/payment_checkout.dart';
 
 class PaymentScreen extends StatefulWidget {

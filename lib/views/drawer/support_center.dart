@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../constants/colors.dart';
+import '../../core/constants/colors.dart';
 
 class SupportCenter extends StatefulWidget {
   const SupportCenter({super.key});
